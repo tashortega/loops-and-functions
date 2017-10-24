@@ -1,0 +1,37 @@
+var nums = [150, 276, 75, 678];
+var numss = [53, 378, 523, 676];
+var col = [255, 172, 76, 3];
+var col2 = [172, 205, 87, 125];
+var xspeed = 35;
+
+function setup() {
+	createCanvas(windowWidth, windowHeight);
+}
+
+function draw() {
+    background (180);
+    
+    for (var i = 0; i <20; i++) {
+        var x1 = i*150;
+        var y1 = i*72;
+        var x2 = i*108;
+        var y2 = i*273;
+        var x3 = i*6;
+        var y3 = i*73;
+        fill(col2[1],col[3],col[4],col2[1]);
+        triangle(x1,y1,x2,y2,x3,y3);
+    }
+    
+    for (var i2 = 0; i2 < 4; i2++) {
+        fill (col[i2], col2[4], col[i2]);
+        ellipse(i2*100+400, i2*200+200, nums[i2], numss[i2]);    
+    }
+    
+    for (var i = 0; i < 4; i++) {
+        fill(col[i], col2[i], col[i], col2[i]);
+        rect(i*100+500, i*100+100, numss[i], nums[i]);
+    
+    }   
+
+
+}
